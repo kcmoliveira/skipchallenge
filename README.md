@@ -2,7 +2,7 @@
 This provide API microservices for a product delivery. It contains:
 
   - Docker for MySQL and RabbitMQ (the last one is to be done);
-  - One microservice for authentiation;
+  - One microservice for authentication;
   - One microservice for creating users accounts;
   - One microservice for creating restaurants;
   - One microservice for creating products for the restaurants;
