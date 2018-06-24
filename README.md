@@ -1,5 +1,5 @@
 # Skipchallenge
-This provide API microservices for a product delivery. It contains:
+This provide API microservices for a product delivery application. It contains:
 
   - Docker for MySQL and RabbitMQ (the last one is to be done);
   - One microservice for authentiation;
