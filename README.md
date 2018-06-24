@@ -1,8 +1,8 @@
 # Skipchallenge
 This provide API microservices for a product delivery application. It contains:
 
-  - Docker for MySQL and RabbitMQ (the last one is to be done);
-  - One microservice for authentiation (because of the time, the restaurant authentication part uses the password in the restaurant table);
+  - Docker for MySQL and RabbitMQ;
+  - One microservice for authentiation;
   - One microservice for creating users accounts;
   - One microservice for creating restaurants;
   - One microservice for creating products for the restaurants;
@@ -23,3 +23,8 @@ The project was developed using TDD, which means there are unit tests for all mi
 | creating restaurants | **restaurants**/RestaurantRestTest.java |
 | creating products for the restaurants | **products**/ProductsRestTest.java |
 | order products | **orders**/OrdersRestTest.java |
+
+# Important
+  - The RabbitMQ is not implemented yet;
+  - Because of the time, the restaurant authentication part uses the password in the restaurant table;
+  - Some validations were not implemented, but all of them were marked as TODO;
