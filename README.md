@@ -14,7 +14,7 @@ In order to test the microservices, first it's necessary to start the docker con
 $ cd docker
 $ docker docker-compose up
 ```
-The project was developed using TDD, which means there are unit tests for all microservices. feel free to test any one of them.
+The project was developed using TDD, which means there are unit tests for all microservices. Feel free to test any one of them.
 
 | Microservice | Module/Java Test Class |
 | ------ | ------ |
