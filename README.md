@@ -16,10 +16,10 @@ $ docker docker-compose up
 ```
 The project was developed using TDD, which means there are unit tests for all microservices. Fell free to test any one of them.
 
-| Microservice | Java Test Class |
+| Microservice | Module/Java Test Class |
 | ------ | ------ |
-| authentiation | auth/AuthRestTest.java |
-| creating users accounts | accounts/AccountRestTest.java |
-| creating restaurants | restaurants/RestaurantRestTest.java |
-| creating products for the restaurants | products/ProductsRestTest.java |
-| order products | orders/OrdersRestTest.java |
+| authentiation | **auth**/AuthRestTest.java |
+| creating users accounts | **accounts**/AccountRestTest.java |
+| creating restaurants | **restaurants**/RestaurantRestTest.java |
+| creating products for the restaurants | **products**/ProductsRestTest.java |
+| order products | **orders**/OrdersRestTest.java |
