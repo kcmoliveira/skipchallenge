@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  skip_mysql:
+    container_name: skip_mysql
+    image: mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=skipthedishesroot
+      - MYSQL_DATABASE=skipthedishes
+      - MYSQL_USER=skipthedishes
+      - MYSQL_PASSWORD=skipthedishes
+    volumes:
+      - "./mysql_scripts:/docker-entrypoint-initdb.d"
+
+  skip_rabbitmq:
+    container_name: skip_rabbitmq
+    image: rabbitmq:management
+    restart: always
+    ports:
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "15671:15671"
+      - "15672:15672"
