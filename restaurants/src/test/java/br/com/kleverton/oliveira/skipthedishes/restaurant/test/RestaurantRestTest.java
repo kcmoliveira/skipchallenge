@@ -24,8 +24,8 @@ public class RestaurantRestTest {
     @Autowired
     private RestaurantRepository restaurantRepository;
 
-    private String name = "Skip restaurant" + System.currentTimeMillis();
-    private String restaurantJson = "{\"name\" : \"" + name +  "\",\"password\" : \"123456\"}";
+    private static String name = "Skip restaurant" + System.currentTimeMillis();
+    private static String restaurantJson = "{\"name\" : \"" + name +  "\",\"password\" : \"123456\"}";
 
     @BeforeClass
     public static void beforeClassTest() {
@@ -44,7 +44,7 @@ public class RestaurantRestTest {
 
         HttpResponse<JsonNode> response = Unirest.post(CREATE_RESTAURANT)
                 .header("accept", "application/json")
-                .body( this.restaurantJson)
+                .body( restaurantJson )
                 .asJson();
 
         Assert.assertEquals( HttpStatus.CREATED_201, response.getStatus() );
@@ -55,7 +55,7 @@ public class RestaurantRestTest {
     public void createRestaurantFailedTest() throws Exception {
         HttpResponse<JsonNode> response = Unirest.post(CREATE_RESTAURANT)
                 .header("accept", "application/json")
-                .body( this.restaurantJson)
+                .body( restaurantJson )
                 .asJson();
 
         Assert.assertEquals( HttpStatus.CONFLICT_409, response.getStatus() );
